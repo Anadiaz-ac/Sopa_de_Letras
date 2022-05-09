@@ -1,78 +1,135 @@
+
 body{
     position: absolute;
     background: url(/imagenes/jonathan-borba-wHqPodClzqE-unsplash.jpg);
     background-size: cover;
-    width: 1600px;
-    height: 1024px;
+    width: 100%;
+    height: 100%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-repeat: no-repeat;
 }
 
-.titulo{
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
 
+
+h1, h2, .listWord {
+
+	padding: 5px;
+
+}
+
+h1{
     color: rgb(3, 3, 3);
     text-align: center;
     text-shadow: rgb(255, 255, 255) 0.01em 0.01em 0.2em;
 
-
 }
 
-.table{
+.cell{
+	background-color: rgba(196, 255, 178);
+}
 
+.contenedor1{
     text-align: center;
-    align-items: center;
-    border-color: rgb(255, 196, 0);
-    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
-th{
-    padding: 3px;
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
+#wordboard {
+
+	margin: 20px auto 0 auto;
+	border: 2px rgb(0, 0, 0) solid;
+	display: table;
+	min-width: 600px;
 }
 
-.secciontable{
+.boardRow {
+	display: table-row;
+}
 
-    text-align: center;
-    align-items: center;
-    margin-left: 485px;
-    margin-top: 20px;
-    width: 630px;
+.cell {
+
+	margin: 0 auto;
+	border: none;
+	display: table-cell;
+	height:30px;
+	width: 30px;
+	font-size: 17px;
+	padding: 0;
+	outline: 0;
+
+	/*Asegura que el texto no se puede seleccionar accidentalmente*/
+	cursor: default; 
+	-moz-user-select: none;
+    -ms-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
 
 }
 
-.tema{
-    width: 300px;
+.cell:hover {
+	background-color: rgb(5, 202, 55);
+    border: 1px rgb(1, 88, 28) solid;
 }
 
-.seccionletras{
+.cell.selected { 
+	background-color: rgb(5, 202, 55);
+    border: 1px rgb(1, 88, 28) solid;
+}
 
-    position: absolute;
+.cell.found {
+
+	background-color: rgb(5, 202, 55);
+	border: 1px rgb(1, 88, 28) solid;
+	font-weight: bold;
+}
+
+
+
+#wordlist { 
+	margin: 40px auto 0 auto;
+	display: table;
+	min-width: 600px;
+	text-align: center;
     font-size: x-large;
-    text-shadow: rgb(255, 255, 255) 0.01em 0.01em 0.2em;
-    width: 500px;
+    text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
 }
 
-.letras1{
-
-    position: absolute;
-    margin-left: 600px;
-    width: 180px;
-
+.listRow {
+	display: table-row;
 }
 
-.letras2{
-
-    position: absolute;
-    margin-left: 840px;
-    width: 180px;
-
+.listWord {
+	display: table-cell;	
 }
 
-#letra{
-    background-color: yellow;
+.listWord.found {
+	color: rgb(1, 88, 28) ;
+	text-decoration: line-through;
 }
 
-#letra2{
-    background-color: rgb(133, 97, 21);
+.contenedor2{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.botones{
+    margin: 20px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.botones button{
+    background-color: rgba(196, 255, 178);
+    font-size: 17px;
+    margin-right: 20px;
+    width: 110px;
+    height: 35px;
 }
